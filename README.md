@@ -1,11 +1,23 @@
 # get_mp3
-Tool to download vídeos from Youtube as mp3
+Tool to download videos from Youtube as mp3.
 
-# Install
+# Installing
 
 Clone this repository to your local machine. 
 
 Run 'pip install -r requirements.txt' to install all dependencies.
+
+# Using
+
+1) Create a text file with the name of the songs to download, one song per line.
+Ex: 
+Bohemian Rhapsody
+Pink Floyd Time
+
+2) Run "python get_file.py {music-names.txt}"
+
+3) Wait a little bit..
+
 
 # Improvements
 
