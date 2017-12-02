@@ -1,9 +1,4 @@
-# Le o arquivo com as músicas
-# otém os links
-# chama o download
-# Registra se download com sucesso na lista de links
-# Se Tudo ok, remove a lista de links. 
-#		Senão: Erro, pega a partir do último link que teve sucesso
+#-*- coding: utf-8 -*-
 
 import sys
 import os
