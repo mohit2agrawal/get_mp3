@@ -1,0 +1,8 @@
+# Core
+
+requests
+beautifulsoup4
+
+# For tests
+
+pytest

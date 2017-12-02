@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Domain
+*.mp3
+
+# Local
+guide.txt
