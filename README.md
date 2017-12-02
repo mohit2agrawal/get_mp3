@@ -11,10 +11,10 @@ Run 'pip install -r requirements.txt' to install all dependencies.
 
 1) Create a text file with the name of the songs to download, one song per line.
 Ex: 
-
+```
 	Bohemian Rhapsody
 	Pink Floyd Time
-
+```
 2) Run "python get_file.py {music-names.txt}"
 
 3) Wait a little bit..
