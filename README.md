@@ -1,5 +1,8 @@
 # get_mp3
-Tool to download videos from Youtube as mp3.
+Tool to download mp3 music from Youtube videos.
+
+# Requirements
+Python 3.5+ and pip
 
 # Installing
 
@@ -15,7 +18,7 @@ Ex:
 Bohemian Rhapsody
 Pink Floyd Time
 ```
-2) Run "python get_file.py {music-names.txt}"
+2) Run "python get_file.py [musics.txt]"
 
 3) Wait a little bit..
 
