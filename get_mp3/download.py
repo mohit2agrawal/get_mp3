@@ -21,13 +21,16 @@ class Mp3ify(object):
 	URL = 'http://213.136.69.55/mp3ify/final-download-new.php?' \
 		  'action=download'
 
-	def __format_url(self, video_id: str, title: str, media: str) -> str:
+	def format_url(self, video_id: str, title: str, media: str) -> str:
+		print (self.URL+ '&videoid='+ video_id+ '&title='+title+ '&media='+ media)
 		return (self.URL+ '&videoid='+ video_id+ '&title='+title+ '&media='+ media)
 
-	def __save_file(self, content: str, path: str, media: str):
+
+	def save_file(self, content: str, path: str, media: str):
 		if path:
 			with open(path+ '.'+ media, 'wb') as file:
 				file.write(content)
+
 
 	#def __show_dl_progress(self, response, file_name):
 		#print ("Downloading %s" % file_name)
@@ -46,12 +49,17 @@ class Mp3ify(object):
                 #sys.stdout.write("\r[%s%s]" % ('=' * done, ' ' * (50-done)) )    
                 #sys.stdout.flush()
 
+	def request_service(self, video_id: str, title: str, media: str):
+		res = req.get(self.format_url(video_id, title, media))
+		return res
 
 	def get_file_from_yt(self, video_id: str, title: str, media: str, path: str = None) -> bytes:
 		if not path:
-			res = req.get(self.__format_url(video_id, title, media))
-			if res.ok:
-				self.__save_file(res.content, title, media)
+			res = req.get(self.format_url(video_id, title, media))
+			if res.ok and res.text != 'Error 404':
+				self.save_file(res.content, title, media)
+			else:
+				print('Error: Response is not a mp3 file. Status: %s Response text: %s' %(res.status, res.text))
 
 
 # Saídas:
