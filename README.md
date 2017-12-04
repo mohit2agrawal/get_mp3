@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/raulbolsantos/get_mp3.svg?branch=master)](https://travis-ci.org/raulbolsantos/get_mp3})
+
 # get_mp3
 Tool to download mp3 music from Youtube videos.
 
